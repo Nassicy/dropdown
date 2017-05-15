@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/*
+* @Author: Nassicy
+* @Date:   2017-05-15 15:29:28
+* @Last Modified by:   Nassicy
+* @Last Modified time: 2017-05-15 16:25:06
+*/
+
+ul {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Microsoft YaHei';
+    height: 100%;
+    width: 100%;
+    background: #ccc;
+}
+
+input:-moz-placeholder {
+    color: #999;
+}
+
+input:-ms-input-placeholder {
+    color: #999;
+}
+
+input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.dropdown-box {
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+
+/*输入框样式*/
+
+.search-box {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: #464646;
+    font-size: 0;
+}
+
+.search-box .name {
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+    min-width: 100px;
+    margin-right: 5px;
+}
+
+.search-box .input-txt {
+    color: #320110;
+    background-color: #fcfcfe;
+    font-family: inherit;
+    text-indent: 6px;
+}
+
+
+/*下拉菜单*/
+
+.selectContent {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.selectContent .selectText {
+    position: relative;
+    width: 150px;
+    height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    background: url(../img/select_icon.png) no-repeat;
+    background-color: #fcfcfe;
+    border: 1px solid #ccc;
+    background-position: right 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.selectContent .venus-menu {
+    display: none;
+    position: absolute;
+    left: 105px;
+    top: 28px;
+    width: 150px;
+    z-index: 10;
+    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #dcdfc4;
+    color: #420202;
+}
+
+.selectContent .venus-menu .menu-item {
+    width: 100%;
+    height: 30px;
+    text-indent: 6px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.selectContent .venus-menu .menu-item:hover {
+    color: #990099;
+    background: #d3d6b8;
+    cursor: pointer;
+}
+
+.selectContent .venus-menu .menu-item .item-txt {
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 6px;
+    vertical-align: 18px;
+}
+
+.selectContent .venus-menu .menu-item input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+    min-width: 0;
+    vertical-align: 16px;
+    margin-left: 5px;
+}

@@ -1,0 +1,131 @@
+/*
+* @Author: Nassicy
+* @Date:   2017-05-15 15:29:28
+* @Last Modified by:   Nassicy
+* @Last Modified time: 2017-05-15 16:25:01
+*/
+
+ul {
+    list-style: none;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,
+body {
+    font-family: 'Microsoft YaHei';
+    height:100%;
+    width:100%;
+    background:#ccc;
+}
+input:-moz-placeholder {
+    color: #999;
+}
+
+input:-ms-input-placeholder {
+    color: #999;
+}
+
+input::-webkit-input-placeholder {
+    color: #999;
+}
+.dropdown-box{
+    width:600px;
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform: translate(-50%, -50%);
+}
+.inline-block {
+    display: inline-block;
+}
+
+$label-width:100px;
+$label-margin-right:5px;
+$input-height:28px;
+$input-width:150px;
+
+
+/*输入框样式*/
+.search-box {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: #464646;
+    font-size:0;
+    .name {
+        font-size: 14px;
+        font-weight: normal;
+        text-align: right;
+        min-width: $label-width;
+        margin-right:$label-margin-right;
+    }
+    .input-txt {
+        color: #320110;
+        background-color: #fcfcfe;
+        font-family:inherit;
+        text-indent:6px;
+    }
+}
+
+
+/*下拉菜单*/
+.selectContent {
+    position: relative;
+    box-sizing:border-box;
+    .selectText {
+        position: relative;
+        width:$input-width;
+        height:$input-height;
+        line-height:$input-height;
+        cursor: pointer;
+        background: url(../img/select_icon.png) no-repeat;
+        background-color: #fcfcfe;
+        border:1px solid #ccc;
+        background-position: right 8px;
+        border-radius:4px;
+        box-sizing:border-box;
+    }
+    .venus-menu {
+        display: none;
+        position: absolute;
+        left: $label-width + $label-margin-right;
+        top: $input-height;
+        width: $input-width;
+        z-index: 10;
+        border-radius: 4px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background-color: #dcdfc4;
+        color: #420202;
+        .menu-item {
+            width: 100%;
+            height: 30px;
+            text-indent: 6px;
+            line-height: 30px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &:hover {
+                color: #990099;
+                background: #d3d6b8;
+                cursor: pointer;
+            }
+            .item-txt {
+                font-weight: normal;
+                cursor: pointer;
+                font-size:14px;
+                margin-left:6px;
+                vertical-align: 18px;
+            }
+            input[type='checkbox'] {
+                width: 15px;
+                height: 15px;
+                min-width: 0;
+                vertical-align: 16px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
